@@ -38,7 +38,7 @@ img {
 }
 
 section {
-   padding: 2em 1em;
+   padding: 2.5em 1em;
 }
 
 .mb-0 {
@@ -66,6 +66,10 @@ h2 {
  
 p {
    margin-bottom: 0.85em;
+}
+
+p:last-child {
+   margin-bottom: 0;
 }
 
 .section-title-small {
@@ -141,7 +145,7 @@ nav a:focus   {
 .btn-group {
    display: flex;
    flex-wrap: wrap;
-   /* justify-content: center; */
+   justify-content: center;
    flex-direction: column;
 }
 
@@ -197,6 +201,7 @@ nav a:focus   {
    background-color: #512e5ab9;
    background-image: url(pic/ex.jpg);
    background-blend-mode: multiply;
+   background-size: cover;
    padding: 3em 1em 1.5em;
 }
 
@@ -211,12 +216,18 @@ nav a:focus   {
 .products {
    display: flex;
    flex-direction: column;
+   max-width: 30rem;
+   margin: 0 auto;
 }
 
 .product {
    border-radius: 1em;
    overflow: hidden;
    box-shadow: 0 0 1em rgba(0,0,0, 0.1)
+}
+
+.product:last-of-type {
+   margin-bottom: 3em;
 }
 
 .product__content {
@@ -236,18 +247,25 @@ nav a:focus   {
 
 
 footer {
-   background: #333;
+   background: #44264d;
    padding: 2em 1em;
    color: white;
    display: flex;
+   justify-content: center;
+   gap: 5em;
+   margin-bottom: 0;
+   margin-top: 3em;
 }
 
 footer a {
    color: inherit;
 }
 
-.footer-nav {
+.footer-nav,
+.footer-social {
    list-style: none;
+   margin: 0;
+   padding: 0;
 }
 
 .footer-nav a {
@@ -258,3 +276,93 @@ footer a {
 .footer-nav a:hover {
    text-decoration: underline;
 }
+
+.fa-instagram {
+   font-size: 2.4rem;
+   margin-bottom: 11px;
+}
+
+.fa-facebook-f {
+   font-size: 2.4rem;
+}
+
+.social-link {
+   display: inline-block;
+}
+
+
+@media only screen and (min-width: 750px) {
+   section {
+      padding: 6em 1em;
+   }
+
+   .btn-group {
+      margin-top: 1em;
+      flex-direction: row;
+   }
+
+   .btn + .btn {
+      margin-left: .5em;
+   }
+
+   .about-us {
+      flex-direction: row;
+   }
+
+   .about-us__intro,
+   .about-us__body {
+      flex: 0 1 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 4em 2em;
+      justify-content: center;
+   }
+
+   .about-us__intro {
+      text-align: center;
+   }
+
+   .about-us__intro > * {
+      max-width: 27rem;
+      margin-left: auto;
+   }
+
+   .about-us__budy {
+      text-align: center;
+   }
+
+   .about-us__budy > * {
+      max-width: 27rem;
+      margin-right: auto;
+   }
+
+   .order-online > *  {
+      max-width: 70ch;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .products {
+      flex-direction: row;
+      max-width: 1200px;
+      padding: 0 5em;
+   }
+
+   .product {
+      margin: 0;
+      flex: 0 1 33%;
+   }
+
+   .product + .product {
+      margin-left: 1em;
+   }
+
+   .product:last-of-type {
+      margin-bottom: 0;
+   }
+}
+
+
+
+
+
